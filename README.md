@@ -1,5 +1,14 @@
 # calculator-app
-simple calculator to perform basic mathematical operations.
+
+# Calculator App
+
+[![Build Status](https://semaphoreapp.com/api/v1/projects/d4cca506-99be-44d2-b19e-176f36ec8cf1/128505/badge.svg)](https://nachiketavadera.github.io/Flashlight)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/NachiketaVadera/Flashlight)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+## Summary
+
+This is a simple calculator application that performs basic operations.
 
 <ol>
     <li>Performs simple arithmetic calculation</li>
@@ -8,26 +17,49 @@ simple calculator to perform basic mathematical operations.
     <li>Good userinterface</li>
 </ol>
 
-HOW TO CONTRIBUTE
+## Downloads
 
-Getting started
+## Code
 
-1. Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
-2. Clone your fork down to your local machine
+The majority of the code is written in Java and is simple. For detecting shake motion:
+Declare global variables:
 
-   git clone https://github.com/your-username/calculator-app.git
-   
-3. Create a branch
+```java
+    switch(v.getId())
+        {
 
-   git checkout -b branch-name
-   
-4. Make your changes (choose from any task)
+            case R.id.add :
+                b = Integer.valueOf(etn1.getText().toString());
+                etn1.setText("");
+                 c = a + b;
+                break;
 
-5. Commit and push
+            case R.id.sub :
+                etn1.setText(null);
 
-   git add .
-   git commit -m 'Commit message'
-   git push origin branch-name
-   
-6. Create a new pull request from your forked repository (Click the New Pull Request button located at the top of your repo)
-Wait for your PR review and merge approval!
+                b = Integer.valueOf(etn1.getText().toString());
+                c = a - b; break;
+
+            case R.id.mul :         etn1.setText(null);
+
+                b = Integer.valueOf(etn1.getText().toString());
+                c = a * b; break;
+
+            case R.id.div :        etn1.setText(null);
+
+                b = Integer.valueOf(etn1.getText().toString());
+                c = a / b; break;
+
+            case R.id.result : etn1.setText(String.valueOf(c));
+        }
+```
+
+## Contributing :wink:
+
+Any help, including feedback, is highly appriciated. I have just started out with Android and I’m relatively new to app development.
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b new-branch`
+3. Commit your changes: `git commit -am 'Make a valuable addition'`
+4. Push to the branch: `git push origin new-feature`
+5. Submit a pull request :D
